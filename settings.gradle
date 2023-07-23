@@ -1,0 +1,7 @@
+rootProject.name = 'gs-spring-boot-kafka-distributed-tracing'
+include(
+        'gs-spring-boot-kafka-producer',
+        'gs-spring-boot-kafka-consumer',
+        'gs-spring-boot-kafka-producer-v3',
+        'gs-spring-boot-kafka-consumer-v3'
+)

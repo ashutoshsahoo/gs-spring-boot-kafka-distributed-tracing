@@ -1,0 +1,23 @@
+server:
+  port: 8085
+spring:
+  application:
+    name: gs-spring-boot-kafka-producer
+  main:
+    banner-mode: "off"
+  kafka:
+    bootstrap-servers: http://localhost:9092
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.LongSerializer
+    consumer:
+      key-deserializer:  org.apache.kafka.common.serialization.LongDeserializer
+  sleuth:
+    trace-id128: true
+    supports-join: false
+    propagation:
+      type:
+        - B3
+        - W3C
+  level:
+    #    root: warn
+    com.ashu.practice: debug
